@@ -1,0 +1,10 @@
+function solution($a) {
+$len = count($a);
+$newarray = array_unique($a);
+$k=array_diff_assoc($a,$newarray);
+$t=array_keys($k);
+if($k == array()){
+    return -1;
+} else{
+return $a[$t[0]];
+}}
