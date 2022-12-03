@@ -1,0 +1,17 @@
+function solution($s) {
+$a=str_split($s);
+$p=array_unique($a);
+$l=array_keys($p);
+$k=array_keys(array_diff_key($a,$p));
+$m=array_values($p);
+$n=array_values(array_diff_key($a,$p));
+$v=array_diff($m,$n);
+//return $v;
+if($v==array()){
+return "_";    
+}
+else{
+$g=min(array_keys($v));   
+return $v[$g];}
+
+}
